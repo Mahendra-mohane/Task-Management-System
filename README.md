@@ -112,18 +112,18 @@ Open your browser and visit http://localhost:3000 to access the Task Management 
 Frontend:-
 
 ```bash
- - (https://papaya-baklava-1419c4.netlify.app/)
+ - [@Frontend Link](https://papaya-baklava-1419c4.netlify.app/)
 ```
 Backend:-
 
 ```bash
-  - (https://elegant-lamb-dress.cyclic.app/todos)
+  - [@Backend Link](https://elegant-lamb-dress.cyclic.app/todos)
 ```
 
 ## GitHub Repo:-
 
 ```bash
-  https://github.com/Mahendra-mohane/Task-Management-System
+ - [@Repo Link](https://github.com/Mahendra-mohane/Task-Management-System)
 ```
 
 ## Authors
