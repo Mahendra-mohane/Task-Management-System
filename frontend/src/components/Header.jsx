@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1 style={{fontWeight:"bold"}}>TodoList</h1>
+            <h1 style={{fontWeight:"bold",fontSize:"50px"}}>Task Management System</h1>
         </header>
     )
 }

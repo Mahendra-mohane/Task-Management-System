@@ -103,7 +103,8 @@ Open your browser and visit http://localhost:3000 to access the Task Management 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/Mahendra-mohane/Task-Management-System/blob/main/frontend/public/assets/Screenshot.png)
+
 
 
 ## Deployment
