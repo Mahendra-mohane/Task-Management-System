@@ -1,28 +1,29 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import mongoose from 'mongoose';// Importing the 'mongoose' library for MongoDB connection.
+import dotenv from 'dotenv';// Importing 'dotenv' for loading environment variables from a '.env' file
+dotenv.config();//// Loading environment variables from a '.env' file
 
-dotenv.config();
-
-const USERNAME = process.env.DB_USERNAME;
-const PASSWORD = process.env.DB_PASSWORD;
-
+// Function to establish a connection with the MongoDB database
 const Connection = () => {
+    
+    const MONGODB_URI = process.env.MONGODB_URI;//Retriev the MongoDB URI from environment variables
 
-    const MONGODB_URI = `mongodb://${USERNAME}:${PASSWORD}@ac-hphkfqv-shard-00-00.bmuzxat.mongodb.net:27017,ac-hphkfqv-shard-00-01.bmuzxat.mongodb.net:27017,ac-hphkfqv-shard-00-02.bmuzxat.mongodb.net:27017/?ssl=true&replicaSet=atlas-ifygh4-shard-0&authSource=admin&retryWrites=true&w=majority`;
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true }); // Connecting to the MongoDB using the retrieved URI
 
-    mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-
+    // Event listener for successful connection
     mongoose.connection.on('connected', () => {
-        console.log('Database connected Successfully');
-    })
+        console.log('Database (MongoDB) connected successfully');
+    });
 
+    // Event listener for disconnection
     mongoose.connection.on('disconnected', () => {
         console.log('Database disconnected');
-    })
+    });
 
-    mongoose.connection.on('error', () => {
-        console.log('Error while connecting with the database ', error.message);
-    })
-}
+    // Event listener for connection errors
+    mongoose.connection.on('error', (error) => {
+        console.log('Error while connecting with the database (MongoDB): ', error.message);
+    });
+};
 
+// Exporting the 'Connection' function for use in other parts of the application
 export default Connection;
