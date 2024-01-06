@@ -122,9 +122,7 @@ Backend:-
 
 ## GitHub Repo:-
 
-```bash
  - [@Repo Link](https://github.com/Mahendra-mohane/Task-Management-System)
-```
 
 ## Authors
 
